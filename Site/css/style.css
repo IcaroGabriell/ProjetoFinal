@@ -1,0 +1,93 @@
+:root {
+  --fundo: #f5f6fa;
+  --texto: #1d2233;
+  --titulo: #181f5c;
+  --destaque: #e0853a;
+  --suave: #5b6275;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  max-width: 42rem;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--titulo);
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.4rem;
+}
+
+header p {
+  margin: 0;
+  color: var(--suave);
+}
+
+h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+a {
+  color: var(--titulo);
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--destaque);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* Lista desenhada como um histórico do Git */
+.repos {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--titulo);
+}
+
+.repos li {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.repos li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 6px);
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--destaque);
+}
+
+.repos span {
+  display: block;
+  color: var(--suave);
+  font-size: 0.95rem;
+}
+
+footer {
+  margin-top: 3rem;
+  color: var(--suave);
+  font-size: 0.9rem;
+}
